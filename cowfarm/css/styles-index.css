@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url(../images/fondo2.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+
+
+
+
+header{
+
+    /* Posiciona el header sobre el contenido */
+    position: absolute;
+
+    /* Lo pega arriba */
+    top: 0;
+
+    /* Lo pega a la izquierda */
+    left: 0;
+
+    /* Ocupa todo el ancho */
+    width: 100%;
+
+    /* Usa Flexbox */
+    display: flex;
+
+    /* Separa elementos horizontalmente */
+    justify-content: space-between;
+
+    /* Centra elementos verticalmente */
+    align-items: center;
+
+    /* Permite salto de línea */
+    flex-wrap: wrap;
+
+    /* Espaciado interno */
+    padding: 20px 5%;
+
+    /* Mantiene el header encima de otros elementos */
+    z-index: 100;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+/* Estilos del logo */
+.logo{
+    position: relative;
+    left: -1px;
+    /* Ancho base del logo */
+    width: 140px;
+
+    /* Evita que exceda el contenedor */
+    max-width: 100%;
+
+    /* Desactiva interacción del mouse */
+    pointer-events: none;
+    
+}
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+/* Contenedor del menú de navegación */
+.navigation{
+
+    /* Posicionamiento relativo */
+    position: relative;
+
+    /* Baja ligeramente el menú */
+    top: 10px;
+
+    /* Mueve el menú hacia la izquierda */
+    left: -350px;
+
+    /* Usa Flexbox */
+    display: flex;
+
+    /* Centra verticalmente */
+    align-items: center;
+
+    /* Permite salto de línea */
+    flex-wrap: wrap;
+
+    /* Espacio entre elementos */
+    gap: 10px;
+}
+
+/* Estilos de los enlaces */
+.navigation a{
+
+    /* Elimina subrayado */
+    text-decoration: none;
+
+    /* Color del texto */
+    color: #359381;
+
+    /* Espaciado interno */
+    padding: 8px 16px;
+
+    /* Bordes redondeados */
+    border-radius: 20px;
+
+    /* Grosor del texto */
+    font-weight: 600;
+
+    /* Suaviza animaciones */
+    transition: 0.3s;
+}
+
+/* Hover y estado activo */
+.navigation a:hover,
+.navigation a:active{
+
+    /* Fondo verde */
+    background: #359381;
+
+    /* Texto blanco */
+    color: white;
+}
+
+/* =========================
+   BOTÓN LOGIN
+========================= */
+
+/* Botón login */
+.navigation .btnlogin-popup{
+
+    /* Fondo transparente */
+    background: transparent;
+
+    /* Elimina borde */
+    border: none;
+
+    /* Elimina outline */
+    outline: none;
+
+    /* Bordes redondeados */
+    border-radius: 6px;
+
+    /* Cursor tipo botón */
+    cursor: pointer;
+
+    /* Tamaño de fuente */
+    font-size: 1rem;
+
+    /* Color del texto */
+    color: #359381;
+
+    /* Grosor del texto */
+    font-weight: 500;
+
+    /* Suaviza animaciones */
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hover del botón login */
+.navigation .btnlogin-popup:hover,
+.navigation .btnlogin-popup:active{
+
+    /* Texto blanco */
+    color: white;
+}
+
+
+
+
+
+.container{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    top: 60px;
+    left: center;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span{
+    font-size: 12px;
+}
+
+.container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button{
+    background-color: #359381;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons{
+    margin: 20px 0;
+}
+
+.social-icons a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    height: 100%;
+    background-color: #359381;
+    background: linear-gradient(to right, #235347, #163832);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
