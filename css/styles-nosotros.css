@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #f9f9f9;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    padding: 20px 5%;
+    z-index: 100;
+
+    flex-wrap: wrap;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo{
+    width: 140px;
+    max-width: 100%;
+    pointer-events: none;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #359381;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navigation a:hover,
+.navigation a:active{
+    background: #359381;
+    color: white;
+}
+
+.navigation .btnlogin-popup{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #359381;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navigation .btnlogin-popup:hover,
+.navigation .btnlogin-popup:active{
+    color: white;
+}
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#text{
+    position: absolute;
+    font-size: clamp(2rem, 8vw, 5rem);
+    color: #fff;
+    text-shadow: 4px 4px 4px rgba(0,0,0,.2);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.sec{
+    position: relative;
+    background: #003329;
+    padding: 80px 8%;
+}
+
+.sec h2{
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.sec p{
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+@media (max-width: 1024px){
+
+    header{
+        padding: 20px 4%;
+    }
+
+    .navigation{
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+        left: 0;
+    }
+
+    .sec{
+        padding: 70px 6%;
+    }
+}
+
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo{
+        margin-bottom: 15px;
+    }
+
+    .navigation{
+        justify-content: center;
+        gap: 8px;
+        left: 0;
+        top: 0;
+    }
+
+    .navigation a{
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .navigation .btnlogin-popup{
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .parallax{
+        height: 90vh;
+    }
+
+    #text{
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .sec{
+        padding: 50px 6%;
+    }
+
+    .sec h2{
+        text-align: center;
+    }
+
+    .sec p{
+        text-align: justify;
+    }
+}
+
+@media (max-width: 480px){
+
+    .navigation{
+        flex-direction: column;
+    }
+
+    .navigation a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navigation .btnlogin-popup{
+        width: 100%;
+    }
+
+    #text{
+        padding: 0 10px;
+    }
+
+    .sec{
+        padding: 40px 5%;
+    }
+}
